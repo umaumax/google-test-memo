@@ -96,8 +96,15 @@ g++ -std=c++11 gtest_gmock_main.cpp -include gtest.h -I./googletest/googlemock/s
 # or
 g++ -std=c++11 gtest_gmock_main.cpp -include-pch gtest.h.pch -I./googletest/googlemock/scripts/out/ -L. -lgtest
 # 0.71s user 0.09s system 95% cpu 0.847 total
-----
+```
 
+## Makefile
+```
+cp Makefile googletest/googlemock/scripts/out/
+cd googletest/googlemock/scripts/out/
+make
+make install PRFIX=./
+make clean
 ```
 
 ## NOTE
