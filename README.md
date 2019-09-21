@@ -59,6 +59,10 @@ g++ -std=c++11 -x c++-header googletest/googlemock/scripts/out/gmock/gmock.h -o 
 g++ -std=c++11 -x c++-header <(cat googletest/googlemock/scripts/out/gtest/gtest.h googletest/googlemock/scripts/out/gmock/gmock.h) -o gtest.h.pch
 ```
 
+FYI: [cpp\-intro/002\-build\.md at master · EzoeRyou/cpp\-intro]( https://github.com/EzoeRyou/cpp-intro/blob/master/002-build.md )
+
+>  コンパイル済みヘッダーは1回のコンパイルにつき1つしか使うことができない。
+
 ### gtest only
 ```
 g++ -std=c++11 gtest_main.cpp -I./googletest/googletest/scripts/out/ ./googletest/googletest/scripts/out/gtest/gtest-all.cc
