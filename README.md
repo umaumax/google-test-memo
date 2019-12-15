@@ -118,3 +118,5 @@ make clean
 g++ -std=c++11 main.cpp -I./googletest/googletest/scripts/out/ -L. -lgtest -M
 ```
 
+## FYI
+* [kaizouman/gtest\-cmake\-example: A sample project using GoogleTest with CMake]( https://github.com/kaizouman/gtest-cmake-example )
