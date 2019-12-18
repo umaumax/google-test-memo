@@ -118,5 +118,18 @@ make clean
 g++ -std=c++11 main.cpp -I./googletest/googletest/scripts/out/ -L. -lgtest -M
 ```
 
+### std::vector<std:string>
+vecとvecの比較可能
+```
+EXPECT_EQ(expected, actual);
+```
+
+### gmock
+[クックブック — Google Mock ドキュメント日本語訳]( http://opencv.jp/googlemockdocs/cookbook.html )
+
+```
+EXPECT_THAT(value, matcher);
+```
+
 ## FYI
 * [kaizouman/gtest\-cmake\-example: A sample project using GoogleTest with CMake]( https://github.com/kaizouman/gtest-cmake-example )
