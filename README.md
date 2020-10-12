@@ -1,7 +1,7 @@
 # google-test-memo
 
 ## how to gen gtest one cc,h lib
-```
+``` bash
 git clone https://github.com/google/googletest
 cd googletest/googletest/scripts/
 python ./fuse_gtest_files.py out/
@@ -18,7 +18,7 @@ out
 ```
 
 ## how to gen gtest and gmock one cc,h lib
-```
+``` bash
 git clone https://github.com/google/googletest
 cd googletest/googlemock/scripts/
 python2 ./fuse_gmock_files.py out
@@ -40,7 +40,7 @@ out
 NOTE: header only libではなく，ファイルをまとめた状態となる
 
 ### compile
-```
+``` bash
 g++ -std=c++11 -c -I./googletest/googletest/scripts/out/ ./googletest/googletest/scripts/out/gtest/gtest-all.cc -o gtest.o
 ar r libgtest.a gtest.o
 
@@ -64,7 +64,7 @@ FYI: [cpp\-intro/002\-build\.md at master · EzoeRyou/cpp\-intro]( https://githu
 >  コンパイル済みヘッダーは1回のコンパイルにつき1つしか使うことができない。
 
 ### gtest only
-```
+``` bash
 g++ -std=c++11 gtest_main.cpp -I./googletest/googletest/scripts/out/ ./googletest/googletest/scripts/out/gtest/gtest-all.cc
 
 # or
@@ -83,7 +83,7 @@ g++ -std=c++11 gtest_main.cpp -include-pch gtest.h.pch -I./googletest/googletest
 ```
 
 ### both gtest and gmock
-```
+``` bash
 g++ -std=c++11 gtest_gmock_main.cpp -I./googletest/googlemock/scripts/out/ ./googletest/googlemock/scripts/out/gmock-gtest-all.cc
 
 # or
@@ -103,7 +103,7 @@ g++ -std=c++11 gtest_gmock_main.cpp -include-pch gtest.h.pch -I./googletest/goog
 ```
 
 ## Makefile
-```
+``` bash
 cp Makefile googletest/googlemock/scripts/out/
 cd googletest/googlemock/scripts/out/
 make
@@ -114,20 +114,14 @@ make clean
 ## NOTE
 * Q: ホストのシステムにinstallしてある`gtest`を使っているのでは?
 * A: `-M`や`-MM`を利用して，includeしたheaderの一覧を確認する
-```
+``` bash
 g++ -std=c++11 main.cpp -I./googletest/googletest/scripts/out/ -L. -lgtest -M
-```
-
-### std::vector<std:string>
-vecとvecの比較可能
-```
-EXPECT_EQ(expected, actual);
 ```
 
 ### gmock
 [クックブック — Google Mock ドキュメント日本語訳]( http://opencv.jp/googlemockdocs/cookbook.html )
 
-```
+``` cpp
 EXPECT_THAT(value, matcher);
 ```
 
