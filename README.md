@@ -1,6 +1,8 @@
 # google-test-memo
 
 ## how to gen gtest one cc,h lib
+:warning: `scripts/README.md`を見るとサポートされていないと記述されている
+
 ``` bash
 git clone https://github.com/google/googletest
 cd googletest/googletest/scripts/
